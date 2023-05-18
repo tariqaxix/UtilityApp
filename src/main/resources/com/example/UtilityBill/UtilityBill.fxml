@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" hgap="10" prefHeight="195.0" prefWidth="466.0" vgap="10" styleClass="background" stylesheets="@./custom.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.UtilityBill.UtilityBillController">
+    <Label text="Utility Bill Calculator" GridPane.columnIndex="4" GridPane.columnSpan="4" />
+
+    <Label prefHeight="17.0" prefWidth="65.0" text="   Electricity" GridPane.rowIndex="1" />
+    <Label text="Rate ($/unit)" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+    <Label text="Units" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+    <Label fx:id="electricityBillLabel" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+
+    <Label prefHeight="23.0" prefWidth="45.0" text="   Water" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <padding>
+         <Insets top="5.0" />
+      </padding></Label>
+    <Label text="Rate ($/unit)" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <Label text="Units" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+    <Label fx:id="waterBillLabel" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+
+    <Label prefHeight="25.0" prefWidth="47.0" text="   Gas" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <padding>
+         <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+      </padding></Label>
+    <Label text="Rate ($/unit)" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+    <Label text="Units" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+    <Label fx:id="gasBillLabel" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+
+    <TextField fx:id="electricityRateField" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+    <TextField fx:id="electricityUnitsField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+    <TextField fx:id="waterRateField" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+    <TextField fx:id="waterUnitsField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+    <TextField fx:id="gasRateField" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+    <TextField fx:id="gasUnitsField" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+
+    <Button fx:id="calculateButton" text="Calculate" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="4" />
+
+    <Label fx:id="grandTotalLabel" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+   <columnConstraints>
+      <ColumnConstraints maxWidth="70.66666666666667" minWidth="70.66666666666666" prefWidth="70.66666666666667" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="29.333333333333332" minHeight="9.333333333333334" prefHeight="20.000021298726402" />
+      <RowConstraints maxHeight="34.0" minHeight="13.333333333333336" prefHeight="23.333312034606934" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
